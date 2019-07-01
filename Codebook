@@ -5,24 +5,24 @@ Download the dataset
 Dataset downloaded and extracted under the folder called UCI HAR Dataset
 
 Variables:
-subj_test <- test/subject_test.txt : 2947 rows, 1 column 
-x_test <- test/X_test.txt : 2947 rows, 561 columns 
-y_test <- test/y_test.txt : 2947 rows, 1 columns 
-subj_train <- test/subject_train.txt : 7352 rows, 1 column 
-x_train <- test/X_train.txt : 7352 rows, 561 columns 
-y_train <- test/y_train.txt : 7352 rows, 1 columns 
-features <- features.txt : 561 rows, 2 columns 
-act_labels <- activity_labels.txt : 6 rows, 2 columns 
+subj_test <- test/subject_test.txt
+x_test <- test/X_test.txt 
+y_test <- test/y_test.txt 
+subj_train <- test/subject_train.txt 
+x_train <- test/X_train.txt 
+y_train <- test/y_train.txt 
+features <- features.txt 
+act_labels <- activity_labels.txt 
 
 
 Merges train set and test set into one dataset
-x (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
-y (10299 rows, 1 column) is created by merging y_train and y_test using rbind() function
-subject (10299 rows, 1 column) is created by merging subj_train and subj_test using rbind() function
-mergedata (10299 rows, 563 column) is created by merging Subject, Y and X using cbind() function
+x is created by merging x_train and x_test using rbind() function
+y is created by merging y_train and y_test using rbind() function
+subject is created by merging subj_train and subj_test using rbind() function
+mergedata is created by merging Subject, Y and X using cbind() function
 
 Extracts only the measurements on the mean and standard deviation for each measurement
-meanstd (10299 rows, 88 columns) is created by subsetting MergeData, selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
+meanstd is created by subsetting MergeData, selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
 
 Change labels dataset with descriptive variable names
 code column in TidyData renamed into activity
